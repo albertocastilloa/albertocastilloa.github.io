@@ -4,7 +4,10 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Bootstrap Visulization Dashboard</title>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 		<style>
 			body{
 				background-color: #EDEDED;
@@ -17,54 +20,62 @@
 			.logo{
 				background-color:#06ADA6;
 				color: white;
-				margin-left: 117px;
 				display:inline-block;
+				height: 100%;
+				padding:5px;
+				font-size: 25px;
 			}
 			.main{
 				margin-top: 20px;
-				margin-bottom: 20px;
+				margin-bottom: 40px;
 			}
 			.footer{
 				text-align: center;
-				margin-top: 50px;
-				border-top: 2px solid #06ADA6; 
+				border-top: 5px solid
 			}
-			.footer p{
-				padding-top: 15px;
-				padding-bottom: 15px;
-			}
+			
 			
 	</style>
 	</head>
 	<body>
+		
 		<div class="container-fluid bg-white">
 			<div class="row">
 				<div class="col-sm-7 col-md-8">
-					<p class="logo lead">Lattitud</p>
+					<span class="logo align-middle pull-right">Lattitud</span>
 				</div>
 				<div class="col-sm-5 col-md-4">
-					<nav class="nav justify-content-right">
-						<a class="nav-link" href="#">Plots</a>
-						<a class="nav-link" href="#">Comparison</a>
-						<a class="nav-link" href="#">Data</a>
+					<nav class="nav justify-content-end">
+						<a class="nav-link dropdown-toggle text-secondary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Plots</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Max Temperature</a>
+								<a class="dropdown-item" href="#">Humidity</a>
+								<a class="dropdown-item" href="#">Cloudiness</a>
+								<a class="dropdown-item" href="#">Wind Speed</a>
+							</div>
+						<a class="nav-link text-secondary" href="#">Comparison</a>
+						<a class="nav-link text-secondary" href="#">Data</a>
 					</nav>
 				</div>
 			</div>
 		</div>
 		<div class="container main">
-			<div class="row bg-white">
-				<div class="col-sm-12 col-md-8">
+			<div class="row">
+				<div class="col-sm-12 col-md-7 bg-white">
 					<h2>Summary: Latitude vs. X</h2>
 					<hr/>
 					<article>
-						<img class="img-thumbnail float-left" src="Resources/assets/images/Fig1.png" width="40%">
+						<img class="float-left" src="Resources/assets/images/Fig1.png" width="50%">
 						<p class="font-weight-light text-md-left">The purpose of thos project was to analyze how weather chamges as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
 						<p class="font-weight-light text-md-left">After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitud. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualization created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
 					</article>
 				</div>
-				<div class="col-sm-12 col-md-4">
+				<div class="col-sm-12 col-md-1" style="background-color: #EDEDED;">
+					<p>&nbsp;</p>
+				</div>
+				<div class="col-sm-12 col-md-4 bg-white">
 					<aside>
-						<h2>Visualization</h2>
+						<h2>Visualizations</h2>
 						<hr/>
 						<img class="img-thumbnail mx-auto" src="Resources/assets/images/Fig1.png" width="45%">
 						<img class="img-thumbnail mx-auto" src="Resources/assets/images/Fig2.png" width="45%">
@@ -74,7 +85,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid footer bg-secondary fixed-bottom">
+		<div class="container-fluid footer bg-secondary fixed-bottom border-success" >
 				<div class="span12">
 					<footer>
 						<p class="text-white">&copy; Copyright Coding Bootcamp 2019</p>
