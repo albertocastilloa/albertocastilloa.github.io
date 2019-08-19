@@ -10,10 +10,18 @@ h2, h3{
 .logo{
 	font-family: 'Times New Roman', Times, serif;
 	background-color:#06ADA6;
-	display:inline-block;
-	height: 100%;
 	padding:4px 20px;
 	font-size: 25px;
+
+}
+#navbar{
+	background-color: #06ADA6;
+}
+.navbar-light .navbar-toggler{
+	border-color: #FFFFFF;
+}
+.navbar-collapse{
+	background-color: #FFFFFF;
 }
 .main{
 	margin-top: 20px;
