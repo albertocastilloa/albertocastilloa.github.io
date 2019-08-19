@@ -19,9 +19,10 @@
 		<script>
 			d3.text("Resources/cities.csv", function(data) {
 				var data = "header1,header2,header3\r\na,b,c\r\nd,e,f\r\n";
+				var data = "City_ID,City,Cloudiness,Country,Date,Humidity,Lat,Lng,Max\r\Temp,Wind\r\Speed"
 				var parsedCSV = d3.csv.parseRows(data);
 					
-				var container = d3.select("body")
+				var container = d3.select("#table_cities")
 				.append("div").attr("class", "container")
 				.append("table").attr("class", "table table-hover")
 				.append("tbody")
