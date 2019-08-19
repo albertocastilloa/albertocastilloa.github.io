@@ -34,7 +34,9 @@ h2, h3{
 	border: 10px solid #EDEDED;
 	padding-bottom: 40px;
 }
-
+#plot_comparison img{
+	width: 400px;
+}
 .aside img{
 	width:24%;
 }

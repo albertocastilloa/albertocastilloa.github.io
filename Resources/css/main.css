@@ -29,6 +29,9 @@ h2, h3{
 .main #col_2{ 
 	border: 10px solid #EDEDED;
 }
+#plot_comparison img{
+	width: 400px;
+}
 .aside img{
 	width:49%;
 }

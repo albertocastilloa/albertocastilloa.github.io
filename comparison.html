@@ -4,22 +4,22 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-		<title>Wind Speed - Bootstrap Visualization Dashboard</title>
+		<title>Bootstrap Visualization Dashboard - Home</title>
 		<!--JS files-->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 		<!--CSS files-->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" media="screen and (min-width: 320px) and (max-width: 500px)" href="../Resources/css/mobile.css" />
-		<link rel="stylesheet" type="text/css" media="screen and (min-width: 501px)" href="../Resources/css/main.css" />
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 320px) and (max-width: 500px)" href="Resources/css/mobile.css" />
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 501px)" href="Resources/css/main.css" />
 		
 	</head>
 
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light" id="navbar">
 			
-			<a class="navbar-brand mb-0 h1 logo text-white font-weight-bold" href="../index.html">Lattitud</a>
+			<a class="navbar-brand mb-0 h1 logo text-white font-weight-bold" href="index.html">Lattitud</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
 			  </button>
@@ -29,14 +29,14 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="max-temperature.html">Max Temperature</a>
-								<a class="dropdown-item" href="humidity.html">Humidity</a>
-								<a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
-								<a class="dropdown-item disabled" href="wind-speed.html">Wind Speed</a>
+								<a class="dropdown-item" href="plots/max-temperature.html">Max Temperature</a>
+								<a class="dropdown-item" href="plots/humidity.html">Humidity</a>
+								<a class="dropdown-item" href="plots/cloudiness.html">Cloudiness</a>
+								<a class="dropdown-item" href="plots/wind-speed.html">Wind Speed</a>
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="../comparison.html">Comparison</a>
+							<a class="nav-link disabled" href="../comparison.html">Comparison</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="data/data.html">Data</a>
@@ -45,27 +45,22 @@
 				</div>
 		</nav>
 			
+
 		<div class="container main">
 			<div class="row">
-				<div class="col-sm-12 col-md-8 bg-white" id="col_1">
-					<h2 class="font-weight-bold">Wind Speed</h2>
+				<div class="col-12 bg-white" id="col_1">
+					<h2 class="font-weight-bold">Comparison: Latitude vs. X</h2>
 					<hr/>
 					<article>
-						<img class="img-fluid" src="../Resources/assets/images/Fig4.png" alt="Max Temperature">
-						<p class="font-weight-normal text-md-left text-secondary">As expected, the weather becomes significantly warmer as one approaches the equator (0 Deg. Latitude). More interestingly, however, is the fact that the southern hemisphere tends to be warmer this time of year than the northern hemisphere. This may due to the tilt of the earth at the time of the year this data was gathered.</p>
-					</article>
-				</div>
-				<div class="col-sm-12 col-md-4 bg-white" id="col_2">
-					<aside class="aside">
-						<h3 class="font-weight-bold">Visualizations</h3>
-						<hr/>
-						<div class="text-center">
-							<a href="max-temperature.html"><img class="mx-auto" src="../Resources/assets/images/Fig1.png" alt="Max Temperature"></a>
-							<a href="humidity.html"><img class="mx-auto" alt="Humidity" src="../Resources/assets/images/Fig2.png"></a>
-							<a href="wind-speed.html"><img class="mx-auto" alt="Cloudiness" src="../Resources/assets/images/Fig3.png"></a>
-							<img class="mx-auto" alt="Wind Speed" src="../Resources/assets/images/Fig4.png" style="border: 1px solid #06ADA6">
+						<span>Click any plot to get an in-depth analysis.</span>
+						<div class="text-center" id="plot_comparison">
+							<a href="plots/max-temperature.html"><img class="mx-auto" src="Resources/assets/images/Fig1.png" alt="Max Temperature"></a>
+							<a href="plots/humidity.html"><img class="mx-auto" alt="Humidity" src="Resources/assets/images/Fig2.png"></a>
+							<a href="plots/cloudiness.html"><img class="mx-auto" alt="Cloudiness" src="Resources/assets/images/Fig3.png"></a>
+							<a href="plots/wind-speed.html"><img class="mx-auto" alt="Wind Speed" src="Resources/assets/images/Fig4.png"></a>
 						</div>
-					</aside>
+
+					</article>
 				</div>
 			</div>
 		</div>
